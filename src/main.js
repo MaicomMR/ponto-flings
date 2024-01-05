@@ -2,22 +2,15 @@ const fs = require('fs');
 const { sumTime } = require('./utils/sumTime');
 const { subTime } = require('./utils/subTime');
 const { getPontoMaisData } = require('./utils/pontoMaisRequest');
+const { handleSingleRegister } = require('./handleSingleRegister');
+const { handlePairRegister } = require('./handlePairRegister');
+const { handleOddRegister } = require('./handleOddRegister');
 
 let data;
 let response;
 let pontos;
 
 let printResponse = ''
-
-function getCurrentTimeFormatted() {
-    const currentTime = new Date();
-
-    const hours = String(currentTime.getHours()).padStart(2, '0');
-    const minutes = String(currentTime.getMinutes()).padStart(2, '0');
-
-    const formattedTime = `${hours}:${minutes}`;
-    return formattedTime;
-  }
 
 async function saveRequestToLocal(data){
     saveData = {
@@ -68,7 +61,6 @@ async function fetchData() {
     }
 
     pontos = data.pontos;
-    now = getCurrentTimeFormatted();
 
     // Se não tiver nenhum ponto
     if (Object.keys(pontos).length === 0) {
@@ -77,58 +69,23 @@ async function fetchData() {
 
     // Se tiver só o primeiro ponto
     if (Object.keys(pontos).length === 1) {
-        hoursCount = subTime(now, pontos[0].time)
-
+        hoursCount = handleSingleRegister(pontos[0].time)
         console.log(printResponse + ' ' + hoursCount);
+        return;
     }
 
     // Se tiver pontos pares
     if (Object.keys(pontos).length % 2 === 0) {
-        hoursCount = '00:00';
-        entrada = [];
-        saida = [];
-
-        for(let i = 0; i < pontos.length; i = i + 1 ) {
-            if (i % 2 === 0) {
-                entrada.push(pontos[i].time)
-            } else {
-                saida.push(pontos[i].time)
-            }
-        }
-
-        for(let i = 0; i < saida.length; i = i + 1 ) {
-            addTime = subTime(saida[i], entrada[i])
-            hoursCount = sumTime(hoursCount, addTime)
-        }
-
+        hoursCount = handlePairRegister(pontos)
         console.log(printResponse + ' ' + hoursCount);
+        return;
     }
 
    // TODO: Se tiver pontos ímpares
     if (Object.keys(pontos).length % 2 !== 0) {
-        now = getCurrentTimeFormatted();
-        hoursCount = '00:00';
-        entrada = [];
-        saida = [];
-
-        for(let i = 0; i < pontos.length; i = i + 1 ) {
-            if (i % 2 === 0) {
-                entrada.push(pontos[i].time)
-            } else {
-                saida.push(pontos[i].time)
-            }
-        }
-
-        for(let i = 0; i < saida.length; i = i + 1 ) {
-            addTime = subTime(saida[i], entrada[i])
-            hoursCount = sumTime(hoursCount, addTime)
-        }
-
-        lastRegister = entrada.slice(-1)[0];
-        FromLastToNow = subTime(now, lastRegister)
-        hoursCount = sumTime(hoursCount, FromLastToNow)
-
+        hoursCount = handleOddRegister(pontos);
         console.log(printResponse + ' ' + hoursCount);
+        return;
     }
 }
 
