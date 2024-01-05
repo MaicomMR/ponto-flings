@@ -1,12 +1,13 @@
 
 const { getTodayDateFormated } = require('./getCurrentDayAndFormat');
+const { config } = require('../../config');
 
 // Request tokens
-const client = null;
-const accessToken = null; 
-const token = null; 
-const uid = null; 
-const uuid = null; 
+const client = config().client
+const accessToken = config().accessToken
+const token = config().token
+const uid = config().uid
+const uuid = config().uuid
 
 let todayDate = getTodayDateFormated();
 let requestRoute = `https://api.pontomais.com.br/api/time_card_control/current/work_days/${todayDate}`
