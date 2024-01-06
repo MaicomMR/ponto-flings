@@ -38,6 +38,4 @@ node  /home/ubuntu-pc/ponto-flings/src/main.js
 ```
 
 ### Script em Funcionamento
-1. Se não houver nenhum ponto registrado no dia
-![image](https://github.com/MaicomMR/ponto-flings/assets/12571488/988fdeb9-b601-4e66-9775-392adcdaf059)
-1. Se não houver nenhum ponto registrado no dia
+![image](https://github.com/MaicomMR/ponto-flings/assets/12571488/831f4ca6-dc99-47e8-90b4-2432bb1ef192)
