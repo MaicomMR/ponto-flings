@@ -43,3 +43,6 @@ exemplo:
 > #!/bin/bash
 > node  /home/ubuntu-pc/ponto-flings/src/main.js
 
+
+
+![image](https://github.com/MaicomMR/ponto-flings/assets/12571488/988fdeb9-b601-4e66-9775-392adcdaf059)
