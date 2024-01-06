@@ -25,6 +25,7 @@ async function fetchData() {
     // Se não tiver nenhum ponto
     if (Object.keys(pontos).length === 0) {
         console.log(printResponse + ' 🖑 Marcar o ponto');
+        return;
     }
 
     // Se tiver só o primeiro ponto
