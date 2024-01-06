@@ -33,8 +33,13 @@ chmod +x ponto.sh
 3. Altere o `xxx` da linha acima pelo path até o repositório na sua máquina;
 4. Vá até o tema que você utiliza e adicione a exibição do ponto (`RPROMPT='$PONTOMAIS'`)
 	 :warning: **Cuidado:** caso o seu script já utilize um prompt na direita pode ser sobrescrito
-1. 
 > Exemplo:
 > 1. `code ~/.oh-my-zsh/themes` 
 > 1. Acesse o tema deseja, no nosso caso o `agnoster.zsh-theme`
 > 1. Ao final do arquivo adicione a linha `RPROMPT='$PONTOMAIS'`
+5. No seu arquivo ponto.sh, dentro do repositório, garanta que o path para chamar o arquivo javascript seja absoluto
+
+exemplo:
+> #!/bin/bash
+> node  /home/ubuntu-pc/ponto-flings/src/main.js
+
