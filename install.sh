@@ -19,11 +19,24 @@ fi
 
 # ADICIONANDO PROMPT NO TERMINAL DO TEMA AGNOSTER PARA EXIBIR O HORÁRIO
 PONTOMAIS='$PONTOMAIS'
-RPROMPT_LINE="RPROMPT='\$PONTOMAIS'"
+
+RPROMPT_LINE="RPROMPT='\$(get_ponto)'"
+
 THEME_FILE="$HOME/.oh-my-zsh/themes/agnoster.zsh-theme"
+
+FUNCTION_PT_1="get_ponto() {"
+FUNCTION_PT_2="  $COMMANDLINE"
+FUNCTION_PT_3="  echo $PONTOMAIS"
+FUNCTION_PT_4="}"
+
 if ! grep -qF "$RPROMPT_LINE" "$THEME_FILE"; then
     # Adiciona a linha ao final do arquivo
+    echo \ >> "$THEME_FILE"
     echo "$RPROMPT_LINE" >> "$THEME_FILE"
+    echo "$FUNCTION_PT_1" >> "$THEME_FILE"
+    echo "$FUNCTION_PT_2" >> "$THEME_FILE"
+    echo "$FUNCTION_PT_3" >> "$THEME_FILE"
+    echo "$FUNCTION_PT_4" >> "$THEME_FILE"
     echo "Linha adicionada com sucesso."
 fi
 
@@ -31,7 +44,6 @@ fi
 sed -i 's/ZSH_THEME=.*/ZSH_THEME="agnoster"/' ~/.zshrc
 
 # REESCREVENDO O ponto.sh PARA GARATIR O PATH ABSOLUTO DA MÁQUINA
-
 PATH_EXEC_FILE="${SCRIPT_DIR}/ponto.sh"
 
 if [ -e "$PATH_EXEC_FILE" ]; then
