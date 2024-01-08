@@ -61,8 +61,7 @@ function validateTokens(){
         uid === null ||
         uuid === null)
     {
-        console.log('Há um erro nas suas credenciais');
-        return;
+        throw new Error('Há um erro nas suas credenciais');
     }
 }
 
