@@ -11,6 +11,7 @@
 :warning: **Cuidado: Não compartilhe nem mostre as suas credenciais para outras pessoas!**
 4. Garanta que o arquivo `install.sh` tenha permissão para ser executado
 5. Execute o script de instalação - `./install.sh`
+6. Rode o comando para recarregar seus arquivos do zsh - `source ~/.zshrc`
 
 **Outras informações:**
 1. Caso seja necessário dar permissão de execução para o arquivo rode o comando
