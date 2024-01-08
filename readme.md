@@ -9,7 +9,7 @@
 2. Acesse o diretório do script
 3. Adicione as suas credenciais do PontoMais no arquivo `config.js`
 :warning: **Cuidado: Não compartilhe nem mostre as suas credenciais para outras pessoas!**
-4. Garanta que o arquivo `install.sh` tenha permissão para ser executado
+4. Garanta que o arquivo `install.sh` tenha permissão para ser executado - `chmod +x install.sh`
 5. Execute o script de instalação - `./install.sh`
 
 **Outras informações:**
@@ -36,6 +36,10 @@ exemplo:
 #!/bin/bash
 node  /home/ubuntu-pc/ponto-flings/src/main.js
 ```
+
+4. Altere o arquivo de config para ter o path absoluto da pasta de cache:
+Altere a chave do 'cachePath' considerando o caminho absoluto da sua máquina.
+exemplo: `'cachePath' : '/home/ubuntu-pc/ponto-flings/src/cache/',`
 
 ### Script em Funcionamento
 1. Se não houver nenhum ponto registrado no dia
