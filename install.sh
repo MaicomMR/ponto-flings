@@ -55,3 +55,7 @@ echo '#!/bin/bash' >> "$PATH_EXEC_FILE"
 echo >> "$PATH_EXEC_FILE"
 echo "node ${SCRIPT_DIR}/src/main.js" >> "$PATH_EXEC_FILE"
 /bin/chmod +x ponto.sh
+
+# Adiciona o path absoluto para o local de cache
+CACHE_PATH=$(pwd)/src/cache/
+sed -i "s|'cachePath' : '.*'|'cachePath' : '$CACHE_PATH'|" config.js
