@@ -7,7 +7,8 @@
 ### Como executar o script
 1. Clone o repositório no seu computador - `git clone https://github.com/MaicomMR/ponto-flings.git`
 2. Acesse o diretório do script
-3. Adicione as suas credenciais do PontoMais no arquivo `config.js`
+3. Adicione as suas credenciais do PontoMais no arquivo `config.js` - [tutorial detalhado](https://github.com/MaicomMR/ponto-flings/blob/main/readme-ponto-mais.md)
+
 :warning: **Cuidado: Não compartilhe nem mostre as suas credenciais para outras pessoas!**
 4. Garanta que o arquivo `install.sh` tenha permissão para ser executado - `chmod +x install.sh`
 5. Execute o script de instalação - `./install.sh`
