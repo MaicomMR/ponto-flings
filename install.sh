@@ -59,3 +59,6 @@ echo "node ${SCRIPT_DIR}/src/main.js" >> "$PATH_EXEC_FILE"
 # Adiciona o path absoluto para o local de cache
 CACHE_PATH=$(pwd)/src/cache/
 sed -i "s|'cachePath' : '.*'|'cachePath' : '$CACHE_PATH'|" config.js
+
+# Reloading zsh file
+source ~/.zshrc
