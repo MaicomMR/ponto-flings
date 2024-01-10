@@ -4,6 +4,7 @@ Ponto-flings é um conjunto de scripts cujo objetivo é mostrar no terminal quan
 Com esse recurso, o esperado é que o usuário possa se programar para fazer o tempo desejado de trabalho/colaboração, seja para montar um saldo de banco de horas ou evitar ficar negativo.
 O script foi desenvolvido para interagir com a aplicação PontoMais.
 
+Observação: O script **não marca o ponto** nem interfere nas marcações, a utilização é somente a caráter de exibir o tempo da jornada de trabalho do dia atual.
 ## Informações técnicas
 ### Pré requisitos:
 1.  **Node** instalado na versão **17** ou maior
