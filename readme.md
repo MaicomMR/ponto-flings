@@ -1,10 +1,17 @@
+![WhatsApp-Image-2024-01-10-at-10 47](https://github.com/MaicomMR/ponto-flings/assets/12571488/60c65372-cca9-4afa-8a27-dda3208fe0fb)
+## O que é o pontoFlings
+Ponto-flings é um conjunto de scripts cujo objetivo é mostrar no terminal quantas horas a pessoa já trabalhou no dia. Caso não seja encontrado nenhum ponto no dia, será exibida uma mensagem sugerindo para que você marque o seu ponto.
+Com esse recurso, o esperado é que o usuário possa se programar para fazer o tempo desejado de trabalho/colaboração, seja para montar um saldo de banco de horas ou evitar ficar negativo.
+O script foi desenvolvido para interagir com a aplicação PontoMais.
+
+## Informações técnicas
 ### Pré requisitos:
 1.  **Node** instalado na versão **17** ou maior
 2.  **Linux** ou **wsl2** rodando na máquina
 3.  **OhMyZsh** instalado ([guia para instalar](https://gist.github.com/MaicomMR/b436ae8f454f1d5a8109353eb027ebc8))
 4.  **VSCode** instalado ([link para baixar](https://code.visualstudio.com/))
 
-### Como executar o script
+### Como executar o script _(recomendado)_
 1. Clone o repositório no seu computador - `git clone https://github.com/MaicomMR/ponto-flings.git`
 2. Acesse o diretório do script
 3. Adicione as suas credenciais do PontoMais no arquivo `config.js` - [tutorial detalhado](https://github.com/MaicomMR/ponto-flings/blob/main/readme-ponto-mais.md)
