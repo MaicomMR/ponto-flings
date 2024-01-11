@@ -1,8 +1,9 @@
 #!/bin/bash
 
+source check_node_version.sh
+
 # Caminho absoluto do diretório do script
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
 
 # ADICIONANDO CHAMADA DO SCRIPT PONTO NA BASE DO ZSH
 PREFIXO='PONTOMAIS=$('
@@ -52,6 +53,7 @@ if [ -e "$PATH_EXEC_FILE" ]; then
 fi
 # Cria o arquivo de execução
 echo '#!/bin/bash' >> "$PATH_EXEC_FILE"
+echo 'source check_node_version.sh' >> "$PATH_EXEC_FILE"
 echo >> "$PATH_EXEC_FILE"
 echo "node ${SCRIPT_DIR}/src/main.js" >> "$PATH_EXEC_FILE"
 /bin/chmod +x ponto.sh
