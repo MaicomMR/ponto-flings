@@ -54,3 +54,16 @@ exemplo: `'cachePath' : '/home/ubuntu-pc/ponto-flings/src/cache/',`
 
 ### Script em Funcionamento
 ![image](https://github.com/MaicomMR/ponto-flings/assets/12571488/831f4ca6-dc99-47e8-90b4-2432bb1ef192)
+
+
+
+# Como desinstalar
+1. Remova o código do ponto-flings do seu tema, caso tenha instalado no tema Padrão(Agnoster), vá até o arquivo do tema e remova o código referente ao pontoflings.
+`~/.oh-my-zsh/themes/agnoster.zsh-theme`
+2. Remova a chamada do código do arquivo principal do oh-my-zsh
+`~/.zshrc`
+3. Reinicie o seu OhMyZsh
+`source ~/.zshrc`
+
+
+
